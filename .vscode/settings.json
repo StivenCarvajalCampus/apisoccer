@@ -1,0 +1,6 @@
+{
+    "conventionalCommits.scopes": [
+        "soccerapi"
+    ],
+    "git-graph.enhancedAccessibility": false
+}
