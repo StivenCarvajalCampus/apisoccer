@@ -7,22 +7,28 @@ const soccerapi = async()=>{
         data.teams.Match.forEach(element => {
             console.log(element)
         });
-        plantilla = `
+        let plantilla = `
         <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Fecha y hora</th>
+      <th scope="col">Liga</th>
+      <th scope="col">Estadio</th>
+      <th scope="col">Ronda</th>
+      <th scope="col">Local</th>
+      <th scope="col">Visitante</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">${data.Date}</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">1</th>
+      <td>${data.teams.Match[0].Date}</td>
+      <td>${data.teams.Match[0].League}</td>
+      <td>${data.teams.Match[0].Stadium}</td>
+      <td>${data.teams.Match[0].Round}</td>
+      <td>${data.teams.Match[0].HomeTeam}</td>
+      <td>${data.teams.Match[0].AwayTeam}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
@@ -36,7 +42,8 @@ const soccerapi = async()=>{
       <td>@twitter</td>
     </tr>
   </tbody>
-</table>    
+</table>
+
         `
         resultado+=(plantilla)
         return resultado

@@ -2,5 +2,6 @@
     "conventionalCommits.scopes": [
         "soccerapi"
     ],
-    "git-graph.enhancedAccessibility": false
+    "git-graph.enhancedAccessibility": false,
+    "liveServer.settings.port": 5501
 }
