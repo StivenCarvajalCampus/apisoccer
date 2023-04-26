@@ -107,3 +107,8 @@
     top: 34%;
     left: 39.5%;
 }
+.keeper{
+    transform: rotate(90deg);
+    display: flex;
+    justify-content: center;
+}
