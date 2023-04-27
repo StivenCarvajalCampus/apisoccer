@@ -1,23 +1,38 @@
-const soccerapialign = async(datoa)=>{
+const soccerapialign = async()=>{
     try {
         const res = await fetch(`https://www.thesportsdb.com/api/v1/json/3/latestsoccer.php`)
         const data = await res.json()
-        let resultado = ""
+        let resultadof = ""
         data.teams.Match.forEach(element => {
             console.log(element)
         });
         let plantilla= `
         
     <div class="card border-info mb-3" style="max-width: 18rem;">
-    <div class="card-header">Header</div>
+    <div class="card-header">Alineaciones equipo Local</div>
     <div class="card-body">
-      <h5 class="card-title">Info card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <h5 class="card-title">${data.teams.Match[0].HomeTeam}</h5>
+      <hr>
+      <h5>Arquero <img src="assets/image/portero.png" alt="" srcset=""></h5>
+      <p class="card-text">${data.teams.Match[0].AwayLineupGoalkeeper}</p>  
+      <h5 class="card-title">Defensas <i class="fa-solid fa-shield-halved" style="color: #fa0000;"></i></h5>
+      <p class="card-text">${data.teams.Match[0].AwayLineupDefense.slice(0,20)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupDefense.slice(23,37)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupDefense.slice(39,53)}</p>
+      <h5 class="card-title">Medio campistas<img src="assets/image/disparar.png" alt="" srcset=""> </h5>
+      <p class="card-text">${data.teams.Match[0].AwayLineupMidfield.slice(0,11)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupMidfield.slice(13,28)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupMidfield.slice(30,48)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupMidfield.slice(50,62)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupMidfield.slice(64,82)}</p>
+      <h5 class="card-title">Delanteros <img src="assets/image/disparar.png" alt="" srcset=""> </h5>
+      <p class="card-text">${data.teams.Match[0].AwayLineupForward.slice(0,15)}</p>
+      <p class="card-text">${data.teams.Match[0].AwayLineupForward.slice(17,34)}</p>
     </div>
         
         `
-        resultado+=(plantilla)
-        return resultado
+        resultadof+=(plantilla)
+        return resultadof
     }catch (error) {console.log(error)}
 }
 
