@@ -8,7 +8,7 @@ const soccerapi = async()=>{
             console.log(element)
         });
         let plantilla = `
-        <table class="table">
+        <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -32,14 +32,21 @@ const soccerapi = async()=>{
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>${data.teams.Match[1].Date}</td>
+      <td>${data.teams.Match[1].League}</td>
+      <td>${data.teams.Match[1].Stadium}</td>
+      <td>${data.teams.Match[1].Round}</td>
+      <td>${data.teams.Match[1].HomeTeam}</td>
+      <td>${data.teams.Match[1].AwayTeam}</td>
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
+      <td>${data.teams.Match[2].Date}</td>
+      <td>${data.teams.Match[2].League}</td>
+      <td>${data.teams.Match[2].Stadium}</td>
+      <td>${data.teams.Match[2].Round}</td>
+      <td>${data.teams.Match[2].HomeTeam}</td>
+      <td>${data.teams.Match[2].AwayTeam}</td>
     </tr>
   </tbody>
 </table>

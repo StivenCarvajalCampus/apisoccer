@@ -112,3 +112,9 @@
     display: flex;
     justify-content: center;
 }
+.banner{
+    position: relative;
+}
+.body{
+    background-image: url("../assets/image/fondo.jpg");
+}
